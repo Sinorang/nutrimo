@@ -1,0 +1,58 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: nutrimo-mysql
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      TZ: ${TZ:-UTC}
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker/mysql/conf.d:/etc/mysql/conf.d:ro
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  # (옵션) 가벼운 DB UI — Adminer
+#  adminer:
+#    image: adminer:latest
+#    container_name: nutrimo-adminer
+#    restart: unless-stopped
+#    ports:
+#      - "8081:8080"
+#    depends_on:
+#      mysql:
+#        condition: service_healthy
+
+volumes:
+  mysql_data:
+
+# mysql docker 실행 명령어 모음
+## 컨테이너 실행
+#  docker compose -f docker/docker-compose.yml --env-file docker/.env up -d
+#
+#  # 상태 확인
+#  docker compose -f docker/docker-compose.yml ps
+
+#  set -a
+#  source docker/.env
+#  set +a
+#
+#  # MySQL 컨테이너에 진입
+#  docker exec -it nutrimo-mysql mysql -u"${MYSQL_USER}" -p"${MYSQL_PASSWORD}" "${MYSQL_DATABASE}"
+#
+#  # 종료
+#  docker compose -f docker/docker-compose.yml down
+#
+#  # 종료 + 볼륨까지 삭제 (DB 완전 초기화)
+#  docker compose -f docker/docker-compose.yml down -v

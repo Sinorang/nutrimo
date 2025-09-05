@@ -15,7 +15,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update     # 개발 편의, 운영에서는 금지
+      ddl-auto: update     # 개발 편의, 운영에서는 금지.
     properties:
       hibernate:
         format_sql: true

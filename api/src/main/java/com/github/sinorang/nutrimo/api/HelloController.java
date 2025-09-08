@@ -1,4 +1,4 @@
-package com.github.sinorang.api;
+package com.github.sinorang.nutrimo.api;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

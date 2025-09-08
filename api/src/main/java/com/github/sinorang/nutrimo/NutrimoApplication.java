@@ -1,4 +1,4 @@
-package com.github.sinorang;
+package com.github.sinorang.nutrimo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -9,7 +9,7 @@
  * 	3.	permitAll 경로: 인증 없이 열어둘 API(예: /auth/**, 헬스체크 등)
  * 	4.	401/403 JSON 응답: 리다이렉트 대신 JSON 에러 바디로 응답
  */
-package com.github.sinorang.api.config;
+package com.github.sinorang.nutrimo.config;
 
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;
@@ -64,7 +64,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         // 여기는 인증 없이 허용 (추가하고 싶은 공개 경로를 여기에)
                         .requestMatchers(
-                                // api-unauthorized
+                                // api-unauthenticated
                                 "/hello",
 
                                 // default

@@ -1,4 +1,4 @@
-package com.github.sinorang.nutrimo.common.jpa;
+package com.github.sinorang.nutrimo.common.repository;
 
 import jakarta.persistence.*;
 import lombok.Getter;

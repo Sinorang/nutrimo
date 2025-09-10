@@ -1,6 +1,6 @@
 package com.github.sinorang.nutrimo.user.entity;
 
-import com.github.sinorang.nutrimo.common.jpa.BaseEntity;
+import com.github.sinorang.nutrimo.common.repository.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 

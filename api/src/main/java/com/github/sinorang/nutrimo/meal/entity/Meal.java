@@ -24,7 +24,7 @@ public class Meal extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false,
-    foreignKey = @ForeignKey(name = "fk_meal_user"))
+            foreignKey = @ForeignKey(name = "fk_meal_user"))
     private User user;
 
     @Column(name = "eaten_at", nullable = false)

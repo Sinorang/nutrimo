@@ -36,7 +36,7 @@ class FoodRepositoryImplTest {
     @Test
     @DisplayName("containsIgnoreCase로 부분/대소문자 무시 검색")
     void searchIgnoreCase() {
-        seed("Apple", "BANANA", "orange", "PINEAPPLE", "Apple Pie");
+        seed("Apple", "BANANA", "orange", "PINEAPPLE", "사과");
 
         Page<Food> page = foodRepository.searchByName("apple", PageRequest.of(0, 10));
 

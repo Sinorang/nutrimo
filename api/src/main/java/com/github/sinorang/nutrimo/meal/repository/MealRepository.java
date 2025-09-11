@@ -1,7 +1,7 @@
 package com.github.sinorang.nutrimo.meal.repository;
 
 import com.github.sinorang.nutrimo.meal.entity.Meal;
-import com.github.sinorang.nutrimo.user.entity.User;
+import com.github.sinorang.nutrimo.common.repository.domain.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDateTime;

@@ -1,7 +1,7 @@
 package com.github.sinorang.nutrimo.goal.repository;
 
 import com.github.sinorang.nutrimo.goal.entity.NutritionGoal;
-import com.github.sinorang.nutrimo.user.entity.User;
+import com.github.sinorang.nutrimo.common.repository.domain.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.github.sinorang.nutrimo.config;
+package com.github.sinorang.nutrimo.admin.common.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;

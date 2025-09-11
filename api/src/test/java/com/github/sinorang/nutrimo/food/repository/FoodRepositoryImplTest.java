@@ -1,6 +1,6 @@
 package com.github.sinorang.nutrimo.food.repository;
 
-import com.github.sinorang.nutrimo.config.TestQuerydslConfig;
+import com.github.sinorang.nutrimo.common.config.TestQuerydslConfig;
 import com.github.sinorang.nutrimo.food.entity.Food;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

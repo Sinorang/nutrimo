@@ -1,4 +1,4 @@
-package com.github.sinorang.nutrimo.user.entity;
+package com.github.sinorang.nutrimo.common.repository.domain.user.entity;
 
 import com.github.sinorang.nutrimo.common.repository.BaseEntity;
 import jakarta.persistence.*;

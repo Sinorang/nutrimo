@@ -1,12 +1,12 @@
-package com.github.sinorang.nutrimo.config;
+package com.github.sinorang.nutrimo.admin.common.config;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
-import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-@TestConfiguration
-public class TestQuerydslConfig {
+@Configuration
+public class QuerydslConfig {
     @Bean
     public JPAQueryFactory jpaQueryFactory(EntityManager em) {
         return new JPAQueryFactory(em);

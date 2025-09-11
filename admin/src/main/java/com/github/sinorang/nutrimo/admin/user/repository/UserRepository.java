@@ -1,4 +1,4 @@
-package com.github.sinorang.nutrimo.user.repository;
+package com.github.sinorang.nutrimo.admin.user.repository;
 
 import com.github.sinorang.nutrimo.common.repository.domain.user.repository.UserRepositoryBase;
 

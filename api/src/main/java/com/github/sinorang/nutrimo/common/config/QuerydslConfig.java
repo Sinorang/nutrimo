@@ -1,4 +1,4 @@
-package com.github.sinorang.nutrimo.config;
+package com.github.sinorang.nutrimo.common.config;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;

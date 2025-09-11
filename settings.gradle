@@ -1,2 +1,3 @@
 rootProject.name = "nutrimo"
-include(":api", ":common")
+include(":common", ":api", ":admin")
+include 'admin'
